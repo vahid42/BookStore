@@ -1,5 +1,6 @@
 using BS02.Application.Contract;
 using BS02.Application.Contract.Dto;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BS05.Personation.MVCCore
@@ -22,17 +23,18 @@ namespace BS05.Personation.MVCCore
             Books =  bookAppliaction.GetBooks();
         }
 
-        //public RedirectToPageResult OnPostRemove(int id) {
+        public RedirectToPageResult OnPostRemove(int id)
+        {
 
-        //    bookAppliaction.Remove(id);
-        //    return RedirectToPage("./List");
-        //}
-        //public RedirectToPageResult OnPostActivate(int id)
-        //{
-        //    bookAppliaction.Activate(id);
-        //    return RedirectToPage("./List");
+            bookAppliaction.Remove(id);
+            return RedirectToPage("./List");
+        }
+        public RedirectToPageResult OnPostActivate(int id)
+        {
+            bookAppliaction.Activate(id);
+            return RedirectToPage("./List");
 
 
-        //}
+        }
     }
 }

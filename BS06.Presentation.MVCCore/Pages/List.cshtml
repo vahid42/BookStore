@@ -7,8 +7,8 @@
     <div class="card-header">
         <h3 class="float-left">Book List</h3>
         <div class="float-right">
-@*            <a class="btn btn-success" asp-page="./Create" asp-area="">Add New</a>
-*@        </div>
+            <a class="btn btn-success" asp-page="./Create" asp-area="">Add New</a>
+        </div>
     </div>
     <div class="card-body">
         <table class="table">
@@ -40,7 +40,7 @@
                             }
                         </td>
                         <td>@book.CreateDatetime</td>
-@*                        <td>
+                        <td>
                             <a class="btn btn-warning float-left mr-3" asp-page="./Edit" asp-route-id="@book.Id">Edit</a>
                             @if (book.IsDeleted)
                             {
@@ -56,7 +56,7 @@
                                     <input type="hidden" name="id" value="@book.Id" />
                                 </form>
                             }
-                        </td>*@
+                        </td>
                     </tr>
                 }
             </tbody>
